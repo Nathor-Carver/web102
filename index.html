@@ -7,10 +7,9 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 	</head>
 	<body>
-		
 			<header>
 				<nav role="navigation">
-					<img class="hamburger-icon" src="images/Hamburger_icon.svg.png">
+					<img id="hamburger" class="hamburger-icon" src="images/Hamburger_icon.svg.png">
 					<ul id='menu' class='main-menu menu'>
 							<!-- Menu button -->
 							<div class="dropdown">
@@ -38,7 +37,7 @@
 			</header>
 		<div class='wrapper'> <!-- Beginning of Wrapper -->	
 			<main>
-				<h1> Headeeer!!!</h1>
+				<div class="background">
 				<img class="hero-img" src="images/hero_image.jpg">
 					<p class="lorem-ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec facilisis risus. Donec varius ut felis eget vulputate. Duis eu mauris vulputate, ultricies purus quis, imperdiet ante. Phasellus posuere, dolor at ultrices convallis, ipsum nulla congue est, sit amet faucibus ante risus id ligula. Ut massa nibh, finibus non odio sit amet, mollis dignissim tortor. Mauris varius bibendum maximus. Cras iaculis, orci at eleifend sagittis, augue dui pellentesque quam, vitae fermentum mi massa sed tellus. Maecenas at nunc mi. Donec ac odio lorem. Sed quis orci quis justo hendrerit sagittis in eget ex.<br><br>
 
@@ -47,14 +46,33 @@
 					Praesent varius quis dui vel ultrices. Praesent nec leo in nisl molestie imperdiet. Nunc eu mattis mauris. Aliquam vitae auctor ex, aliquam facilisis eros. Vivamus in blandit erat, sit amet dapibus tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida euismod ex, quis aliquam quam tempor a.<br><br>
 
 					Donec et mattis ipsum. Sed rutrum justo vel leo dictum volutpat. Aenean et arcu enim. Maecenas vel nulla libero. Suspendisse suscipit, diam sed egestas sagittis, lacus risus pellentesque elit, nec pretium nunc sem placerat tellus. Duis faucibus ipsum quis lacus varius, at blandit dui pharetra. Proin posuere lacus id rhoncus mollis. Phasellus nec rhoncus nisl, in rutrum sapien. Morbi ultrices sollicitudin diam, eu facilisis massa. Nam luctus lectus nisl, non pharetra magna vulputate id. Proin at sodales libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;<br><br></p>
+				</div>
 			</main>
 			</div> <!-- End of Wrapper -->
 			<footer>
+				<ul class="footer-info">
+					<li class="footer-info">About Us</li>
+					<li class="footer-info">Locations</li>
+					<li class="footer-info">Gallery</li>
+					<li class="footer-info">Contact Us</li>
+				</ul>
 				
 			</footer>
 	<script type="text/javascript"> 
 	//Dont Worry about me yet! Notice how my comment isn't an <!-- any more though!
-		console.log("Site Loaded");
+		var menu= document.getElementById("hamburger");
+		menu.addEventListener("click", function()
+		{
+			var thing= document.getElementById("menu");
+			if(thing.style.backgroundColor == "red")
+			{
+				thing.style.backgroundColor = "blue";
+			}else{
+			thing.style.backgroundColor = "red";}
+			console.log("fired");
+			
+		});
+		
 	</script>
 	</body>
 
